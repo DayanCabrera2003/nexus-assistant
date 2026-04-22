@@ -1,0 +1,9 @@
+pvporcupine
+resemblyzer
+vosk
+sounddevice
+google-generativeai
+pyttsx3
+numpy
+pyyaml
+python-dotenv
