@@ -30,3 +30,7 @@ __pycache__/
 # Se descargan/generan localmente; no se versionan
 models/*
 !models/.gitkeep
+
+# Logs (runtime, rotan localmente)
+logs/*
+!logs/.gitkeep
