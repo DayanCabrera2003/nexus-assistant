@@ -1,0 +1,27 @@
+# Docs/spec privados del proyecto
+NEXUS_proyecto.md
+CLAUDE.md
+docs/
+
+# Virtual envs
+mi_env/
+venv/
+.venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Claude Code local
+.claude/
+
+# Secrets (no el .example)
+.env
