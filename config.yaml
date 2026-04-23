@@ -1,0 +1,23 @@
+wake_word:
+  modelo: "models/NEXUS_linux.ppn"
+  sensibilidad: 0.7
+
+verificacion:
+  huella_vocal: "models/mi_huella_vocal.npy"
+  umbral: 0.75
+  duracion_muestra: 3
+
+reconocimiento:
+  modelo: "models/vosk-model-small-es"
+  timeout: 5
+
+gemini:
+  api_key: "${GEMINI_API_KEY}"
+  modelo: "gemini-2.0-flash"
+  busqueda_tiempo_real: true
+  prompt_sistema: "Eres NEXUS, un asistente conciso. Responde siempre en español, de forma breve y directa."
+
+voz:
+  velocidad: 160
+  volumen: 0.9
+  idioma: "es"
