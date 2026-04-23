@@ -25,3 +25,8 @@ __pycache__/
 
 # Secrets (no el .example)
 .env
+
+# Modelos binarios (Vosk, Porcupine .ppn, huella vocal .npy)
+# Se descargan/generan localmente; no se versionan
+models/*
+!models/.gitkeep
