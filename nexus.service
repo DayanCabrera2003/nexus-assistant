@@ -1,0 +1,14 @@
+[Unit]
+Description=NEXUS voice assistant
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+# Ajustar la ruta a la ubicación real del repo en tu sistema:
+# ExecStart=/usr/bin/env python %h/nexus-assistant/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
