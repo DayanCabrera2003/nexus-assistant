@@ -1,6 +1,12 @@
 """Comandos predefinidos y ejecución."""
 from __future__ import annotations
 
+import subprocess
+
+from log import get_logger
+
+logger = get_logger(__name__)
+
 COMANDOS: dict[str, str] = {
     # Sistema
     "apaga la pantalla": "xset dpms force off",
@@ -22,4 +28,9 @@ COMANDOS: dict[str, str] = {
 
 
 def ejecutar(comando: str) -> None:
-    raise NotImplementedError("ejecutar() — implementar con subprocess.run")
+    logger.info("Ejecutando: %s", comando)
+    result = subprocess.run(comando, shell=True, check=False)
+    if result.returncode != 0:
+        logger.warning(
+            "Comando terminó con código %d: %s", result.returncode, comando
+        )
